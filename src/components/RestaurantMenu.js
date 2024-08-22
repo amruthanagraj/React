@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useResturantMenu";
 import RestaurantCategory from "./RestaurantCategory";
-import { useState } from "react";
 
 const RestaurantMenu = () => {
 

@@ -27,7 +27,7 @@ it("should render search feature",async()=>{
 })
 
 
-it("should shows cards before and after filtering from search box",async()=>{
+it("should show cards before and after filtering from search box",async()=>{
     await act(async()=>
         render(
             <BrowserRouter>
@@ -57,7 +57,7 @@ it("should render top rated restaurants",async()=>{
         const topRatedRes = screen.getByRole("button",{name:"Top Rated Restaurants"})
         fireEvent.click(topRatedRes)
         const cardsAfterClick = screen.getAllByTestId("resCard")
-        console.log("cards of top rated",cardsAfterClick)
+        // console.log("cards of top rated",cardsAfterClick)
         expect(cardsAfterClick.length).toBe(6);
        
 })

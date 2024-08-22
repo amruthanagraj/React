@@ -36038,6 +36038,7 @@ const Body = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                 className: "border border-black border-solid",
                                 type: "text",
+                                "data-testid": "searchValue",
                                 value: searchValue,
                                 onChange: (e)=>{
                                     setSearchValue(e.target.value);
@@ -36071,7 +36072,7 @@ const Body = ()=>{
                             className: "flex btn-secondary bg-red-400 px-4 my-4 items-center rounded-lg",
                             onClick: ()=>{
                                 const filterList = listOfRestaurants.filter((res)=>res.info.avgRating > 4);
-                                ssetFilteredRes(filterList);
+                                setFilteredRes(filterList);
                             },
                             children: "Top Rated Restaurants"
                         }, void 0, false, {
@@ -36685,7 +36686,7 @@ const RestaurantMenu = ()=>{
     const [showIndex, setShowIndex] = (0, _react.useState)(0);
     if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 17,
+        lineNumber: 16,
         columnNumber: 34
     }, undefined);
     const { name, cuisines, costForTwoMessage, avgRating } = resInfo?.cards[2]?.card?.card?.info;
@@ -36699,7 +36700,7 @@ const RestaurantMenu = ()=>{
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 29,
+                lineNumber: 28,
                 columnNumber: 14
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -36711,7 +36712,7 @@ const RestaurantMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 14
             }, undefined),
             categories.map((category, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
@@ -36720,13 +36721,13 @@ const RestaurantMenu = ()=>{
                     setShowIndex: ()=>setShowIndex(index)
                 }, category?.card.card.title, false, {
                     fileName: "src/components/RestaurantMenu.js",
-                    lineNumber: 34,
+                    lineNumber: 33,
                     columnNumber: 13
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 28,
+        lineNumber: 27,
         columnNumber: 9
     }, undefined);
 };
