@@ -38,7 +38,7 @@ it("should shows cards before and after filtering from search box",async()=>{
         expect (cardsBeforeClick.length).toBe(8)
         
         const searchBtn = screen.getByRole("button",{name:"Search"});
-        const searchInput = screen.getByTestId("SearchValue")
+        const searchInput = screen.getByTestId("searchValue")
         fireEvent.change(searchInput,{target: {value:"burger"}})
         fireEvent.click(searchBtn)
         const cardsAfterClick = screen.getAllByTestId("resCard")
@@ -58,6 +58,6 @@ it("should render top rated restaurants",async()=>{
         fireEvent.click(topRatedRes)
         const cardsAfterClick = screen.getAllByTestId("resCard")
         console.log("cards of top rated",cardsAfterClick)
-        expect(cardsAfterClick.length).toBe(5);
+        expect(cardsAfterClick.length).toBe(6);
        
 })

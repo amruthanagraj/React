@@ -36,7 +36,7 @@ const Body = () => {
     <div className="body">
         <div className="filter flex items-center">
             <div className="search py-2 p-4 m-4  ">
-                <input className="border border-black border-solid" type="text" value={searchValue} 
+                <input className="border border-black border-solid" type="text" data-testid = "searchValue" value={searchValue} 
                 onChange={(e) => {setSearchValue(e.target.value)}}/>
                 <button className="bg-blue-400 px-4 mx-4 rounded-lg" onClick={()=>{
                     const filteredValue = listOfRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchValue.toLowerCase()))
@@ -52,7 +52,7 @@ const Body = () => {
                 const filterList = listOfRestaurants.filter(
                     (res)=> res.info.avgRating > 4
                 );
-                setListOfRestaurant(filterList)
+                setFilteredRes(filterList)
             }}>
                 Top Rated Restaurants
             </button>
